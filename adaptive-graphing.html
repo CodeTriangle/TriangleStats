@@ -2,7 +2,9 @@
 
 <html>
 <head>
+  <title>Adaptive Graphing: A TriangleStats Test</title>
   <link rel=stylesheet type=text/css href=styles.css>
+  <script src=adaptive-graphing.js></script>
 </head>
 <body>
   <div style="margin:0 auto;width=600px">
@@ -21,17 +23,6 @@
     <input type=button value="GRAPH!" onclick="graph()">
   </div>
   <script>
-  function graph() {
-    var c = document.getElementById("changed");
-    var xc = parseInt(document.getElementById("xc").value);
-    var yc = parseInt(document.getElementById("yc").value);
-    var xm = parseInt(document.getElementById("xm").value);
-    var ym = parseInt(document.getElementById("ym").value);
-    var xUnit = 600/xm;
-    var yUnit = 500/ym;
-    c.setAttribute("cx", xc*xUnit);
-    c.setAttribute("cy", ym-(yc*yUnit));
-  }
   </script>
 </body>
 </html>
