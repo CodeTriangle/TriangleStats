@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel=stylesheet type=text/css href=styles.css>
+</head>
+<body>
+  <div style="margin:0 auto;width=600px">
+    <svg width=600 height=500>
+      <rect width=600 height=500 />
+      <circle id=changed r=3 />
+    </svg>
+    <br>
+    <p>
+      Change these values to define where to put the point.
+    </p>
+    <input id=xc type=text placeholder="X Coordinate" value="100">
+    <input id=yc type=text placeholder="Y Coordinate" value="100">
+    <input id=xm type=text placeholder="X Maximum" value="600">
+    <input id=ym type=text placeholder="Y Maximum" value="500">
+    <input type=button value="GRAPH!" onclick="graph()">
+  </div>
+  <script>
+  function graph() {
+    var c = document.getElementById("changed");
+    var xc = parseInt(document.getElementById("xc").value);
+    var yc = parseInt(document.getElementById("yc").value);
+    var xm = parseInt(document.getElementById("xm").value);
+    var ym = parseInt(document.getElementById("ym").value);
+    var xUnit = 600/xm;
+    var yUnit = 500/ym;
+    c.setAttribute("cx", xc*xUnit);
+    c.setAttribute("cy", ym-(yc*yUnit));
+  }
+  </script>
+</body>
+</html>
