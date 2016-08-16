@@ -1,9 +1,4 @@
-div {
-  display: table;
-}
-
-input {
-  display: block;
+table {
   width: 100%;
 }
 
@@ -20,7 +15,6 @@ svg line {
 }
 
 svg circle {
-  stroke: #AAA;
   fill: black;
 }
 
