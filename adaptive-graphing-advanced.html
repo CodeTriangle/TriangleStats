@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Advanced Adaptive Graphing: A TriangleStats Test</title>
+    <link rel=stylesheet type=text/css href=css/adaptive-graphing.css>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/adaptive-graphing-advanced.js"></script>
+  </head>
+  <body>
+    <svg width="600" height="500">
+      <rect width="600" height="500" />
+      <circle id="changed" r="3" />
+      <path id="xaxis" />
+      <path id="yaxis" />
+    </svg>
+    <br>
+    <p>
+      Change these values to define where to put the point.
+    </p>
+    <span>X Coordinate: </span><input id=xc type=text placeholder="100" value="100"><br>
+    <span>Y Coordinate: </span><input id=yc type=text placeholder="100" value="100"><br>
+    <span>X Minimum: </span><input id=xmin type=text placeholder="-300" value="-300">
+    <span>X Maximum: </span><input id=xmax type=text placeholder="300" value="300"><br>
+    <span>Y Minimum: </span><input id=ymin type=text placeholder="-250" value="-250">
+    <span>Y Maximum: </span><input id=ymax type=text placeholder="250" value="250"><br>
+    <input type=button value="Update Window" onclick="updateWindow()">
+    <input type=button value="Graph Point" onclick="graphPoint()"><br>
+    <input type=button value="Update and Graph" onclick="update()">
+  </body>
+</html>
