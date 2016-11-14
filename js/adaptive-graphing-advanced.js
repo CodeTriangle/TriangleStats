@@ -19,8 +19,8 @@ function updateWindow() {
 }
 
 function updateAxes() {
-  var xpath = "M 0 " + (-ymin * yunit) + " L 600 " + (-ymin * yunit);
-  var ypath = "M " + (-xmin * yunit) + " 0 L " + (-xmin * yunit) + " 500";
+  var xpath = "M 0 " + (500 + ymin * yunit) + " L 600 " + (500 + ymin * yunit);
+  var ypath = "M " + (-xmin * xunit) + " 0 L " + (-xmin * xunit) + " 500";
   $("#xaxis").attr("d", xpath);
   $("#yaxis").attr("d", ypath);
 }

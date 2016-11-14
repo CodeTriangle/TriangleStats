@@ -8,8 +8,8 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/adaptive-graphing.js"></script>
   </head>
-  <body>
-    <svg width=600 height=500>
+  <body onload="update()">
+    <svg id=graph width=600 height=500>
       <rect width=600 height=500 />
       <circle id=changed r=3 />
     </svg>
@@ -17,12 +17,9 @@
     <p>
       Change these values to define where to put the point.
     </p>
-    <span>X Coordinate: </span><input id=xc type=text placeholder="X Coordinate" value="100"><br>
-    <span>Y Coordinate: </span><input id=yc type=text placeholder="Y Coordinate" value="100"><br>
-    <span>X Maximum: </span><input id=xm type=text placeholder="X Maximum" value="600"><br>
-    <span>Y Maximum: </span><input id=ym type=text placeholder="Y Maximum" value="500"><br>
-    <input type=button value="Update Window" onclick="updateWindow()">
-    <input type=button value="Graph Point" onclick="graphPoint()"><br>
-    <input type=button value="Update and Graph" onclick="update()">
+    <span>X Coordinate: </span><input id=xc type=text placeholder="X Coordinate" value="100" onkeyup="graphPoint()"><br>
+    <span>Y Coordinate: </span><input id=yc type=text placeholder="Y Coordinate" value="100" onkeyup="graphPoint()"><br>
+    <span>X Maximum: </span><input id=xm type=text placeholder="X Maximum" value="600" onkeyup="updateWindow()"><br>
+    <span>Y Maximum: </span><input id=ym type=text placeholder="Y Maximum" value="500" onkeyup="updateWindow()"><br>
   </body>
 </html>

@@ -8,25 +8,23 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/adaptive-graphing-advanced.js"></script>
   </head>
-  <body>
+  <body onload="update()">
     <svg width="600" height="500">
       <rect width="600" height="500" />
       <circle id="changed" r="3" />
       <path id="xaxis" />
       <path id="yaxis" />
+      <g id="labels"></g>
     </svg>
     <br>
     <p>
       Change these values to define where to put the point.
     </p>
-    <span>X Coordinate: </span><input id=xc type=text placeholder="100" value="100"><br>
-    <span>Y Coordinate: </span><input id=yc type=text placeholder="100" value="100"><br>
-    <span>X Minimum: </span><input id=xmin type=text placeholder="-300" value="-300">
-    <span>X Maximum: </span><input id=xmax type=text placeholder="300" value="300"><br>
-    <span>Y Minimum: </span><input id=ymin type=text placeholder="-250" value="-250">
-    <span>Y Maximum: </span><input id=ymax type=text placeholder="250" value="250"><br>
-    <input type=button value="Update Window" onclick="updateWindow()">
-    <input type=button value="Graph Point" onclick="graphPoint()"><br>
-    <input type=button value="Update and Graph" onclick="update()">
+    <span>X Coordinate: </span><input id=xc type=text placeholder="X Coordinate" value="100" onkeyup="graphPoint()"><br>
+    <span>Y Coordinate: </span><input id=yc type=text placeholder="Y Coordinate" value="100" onkeyup="graphPoint()"><br>
+    <span>X Minimum: </span><input id=xmin type=text placeholder="X Minimum" value="-300" onkeyup="updateWindow()">
+    <span>X Maximum: </span><input id=xmax type=text placeholder="Y Minimum" value="300" onkeyup="updateWindow()"><br>
+    <span>Y Minimum: </span><input id=ymin type=text placeholder="X Maximum" value="-250" onkeyup="updateWindow()">
+    <span>Y Maximum: </span><input id=ymax type=text placeholder="Y Maximum" value="250" onkeyup="updateWindow()"><br>
   </body>
 </html>
