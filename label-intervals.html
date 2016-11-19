@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Label Intervals: A TriangleStats Test</title>
+    <link rel=stylesheet type=text/css href=css/adaptive-graphing.css>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/label-intervals.js"></script>
+  </head>
+  <body onload="update()">
+    <svg id=graph width=600 height=500>
+      <rect width=600 height=500 />
+      <g id="labels" stroke="black" stroke-width=1 />
+    </svg>
+    <br>
+    <p>
+      Change these values to define what intervals labels will be at.
+    </p>
+    <span>X Maximum: </span><input id=xm type=text placeholder="X Maximum" value="600" onkeyup="update()">
+    <span>X Scale: </span><input id=xs type=text placeholder="X Scale" value="100" onkeyup="update()"><br>
+    <span>Y Maximum: </span><input id=ym type=text placeholder="Y Maximum" value="500" onkeyup="update()">
+    <span>Y Scale: </span><input id=ys type=text placeholder="Y Scale" value="100" onkeyup="update()"><br>
+  </body>
+</html>
